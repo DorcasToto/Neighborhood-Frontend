@@ -5,11 +5,5 @@ import { Injectable } from '@angular/core';
 })
 export class HoodService {
 
-  constructor(
-    public hoodName:string,
-    public photo:string,
-    public hoodLocation:string,
-    public occupantCount:string,
-    public admin:number
-  ) { }
+  constructor() { }
 }
