@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Hoodclass} from '../hoodclass'
+import { Observable } from 'rxjs';
+import {environment} from '../../environments/environment'
+import { HoodService } from '../hood.service';
 
 @Component({
   selector: 'app-hood',
@@ -6,10 +11,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hood.component.css']
 })
 export class HoodComponent implements OnInit {
+  hood: Hoodclass;
+  hoods = [];
+  http;
 
-  constructor() { }
+
+  constructor(private hoodservice: HoodService, http:HttpClient) {
+    this.http = http;
+   }
 
   ngOnInit(): void {
+    this.hoodservice.getHoodList().subscribe((res: Response) => {
+      console.log(res)
+      Object.entries(res).forEach(result => {
+      const [_, value] = result;
+       let name = value['hoodName'];
+       let location = value['hoodLocation']
+       let photo = value['photo']
+       let occupant = value['occupantsCount']
+       let admin = value['admin']
+       let hoodObject = new Hoodclass(name,photo,location,occupant,admin)
+       this.hoods.push(hoodObject)
+      });
+    });
   }
-
 }
