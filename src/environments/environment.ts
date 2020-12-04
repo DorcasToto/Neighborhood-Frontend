@@ -3,8 +3,18 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
-};
+  production: false,
+  
+  hoodEndpoint :'https://hood256.herokuapp.com/api/v1/hoods/',
+  viewhoodsEndPoint:'https://hood256.herokuapp.com/api/v1/view_hood/%3Cpk%3E/',
+  loginEndpoint:'https://hood256.herokuapp.com/auth/login/',
+  signupEndpoint:'https://hood256.herokuapp.com/auth/signup/',
+
+  // method: 'post',
+  // headers: {
+  //   'Content-Type': '',
+  //   'Authorization': window.localStorage.getItem('access')
+  }
 
 /*
  * For easier debugging in development mode, you can import the following file

@@ -1,7 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {HoodComponent} from '../app/hood/hood.component';
+import{ViewhoodInfoComponent} from '../app/viewhood-info/viewhood-info.component'
+import{LoginComponent} from '../app/login/login.component'
+import{SignupComponent} from '../app/signup/signup.component'
 
-const routes: Routes = [];
+
+const routes: Routes = [
+  { path: 'hood', component: HoodComponent },
+  { path: 'viewhood', component: ViewhoodInfoComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
+  {path:'',redirectTo:'/login',pathMatch:'full'}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
