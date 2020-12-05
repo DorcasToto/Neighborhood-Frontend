@@ -31,7 +31,7 @@ export class BusinessComponent implements OnInit {
        let name = value['name'];
        let description = value['description']
        let businessObject = new Business(name,description)
-       this.business.push(businessObject)
+       this.businesses.push(businessObject)
       });
     });
   }
