@@ -10,6 +10,7 @@ import { Viewhoodclass } from './viewhoodclass';
 })
 export class HoodService {
 
+
   hood: Hoodclass
 
   constructor(private http: HttpClient) { }
@@ -78,4 +79,5 @@ export class HoodService {
 
 
 }
+
 

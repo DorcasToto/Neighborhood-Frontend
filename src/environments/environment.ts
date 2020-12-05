@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+
   
   hoodEndpoint :'http://localhost:8000/api/v1/hoods/',
   allposts :'http://localhost:8000/api/v1/allposts/',
@@ -17,6 +18,10 @@ export const environment = {
   //   'Content-Type': '',
   //   'Authorization': window.localStorage.getItem('access')
   }
+
+ 
+};
+
 
 /*
  * For easier debugging in development mode, you can import the following file
