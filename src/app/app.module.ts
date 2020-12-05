@@ -7,6 +7,9 @@ import { HoodComponent } from './hood/hood.component';
 import { BusinessComponent } from './business/business.component';
 import { PostComponent } from './post/post.component';
 import { BusinessDetailComponent } from './business-detail/business-detail.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { BusinessFormComponent } from './business-form/business-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,12 +17,15 @@ import { BusinessDetailComponent } from './business-detail/business-detail.compo
     HoodComponent,
     BusinessComponent,
     PostComponent,
-    BusinessDetailComponent
+    BusinessDetailComponent,
+    NavbarComponent,
+    BusinessFormComponent
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
