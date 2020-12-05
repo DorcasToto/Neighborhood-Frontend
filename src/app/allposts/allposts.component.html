@@ -1,0 +1,33 @@
+<p>allposts works!</p>
+<div class="container-fluid">
+    <h3>AllPosts</h3>
+    <div class="row">
+        <div class="col-md-4 pt-3" *ngFor="let post of postss">
+            <!-- Card -->
+            <div class="card">
+
+                <!-- Card image -->
+                <img class="card-img-top" src="https://res.cloudinary.com/dzvafknwk/{{post.photo}}" alt="Card image cap"
+                    class="img-fluid">
+
+                <!-- Card content -->
+                <div class="card-body">
+
+                    <!-- Title -->
+                    <h4 class="">{{post.title}}</h4>
+                    <!-- Text -->
+                    <div class="row">
+                        <div class="col-sm">
+                            <p>By</p>
+                        </div>
+                        <div class="col-sm">
+                            <p>{{post.user}}</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Card -->
+        </div>
+    </div>
+</div>

@@ -5,10 +5,12 @@
 export const environment = {
   production: false,
   
-  hoodEndpoint :'https://hood256.herokuapp.com/api/v1/hoods/',
-  viewhoodsEndPoint:'https://hood256.herokuapp.com/api/v1/view_hood/%3Cpk%3E/',
-  loginEndpoint:'https://hood256.herokuapp.com/auth/login/',
-  signupEndpoint:'https://hood256.herokuapp.com/auth/signup/',
+  hoodEndpoint :'http://localhost:8000/api/v1/hoods/',
+  allposts :'http://localhost:8000/api/v1/allposts/',
+
+  viewhoodsEndPoint:'http://localhost:8000/api/v1/view_hood/%3Cpk%3E/',
+  loginEndpoint:'http://localhost:8000/auth/login/',
+  signupEndpoint:'http://localhost:8000/auth/signup/',
 
   // method: 'post',
   // headers: {

@@ -20,7 +20,6 @@ export class HoodService {
       photo: string
       hoodLocation: string
       occupantCount: string
-      admin: string
     }
 
     return this.http.get<ApiResponse>(environment.hoodEndpoint, {
@@ -29,6 +28,14 @@ export class HoodService {
         "Authorization": "Bearer " + accessToken
       }
     });
+
+  }
+  getAllHoods(): Observable<any> {
+    interface allhoodsResponse {
+      id:number
+      name: string
+    }
+    return this.http.get<allhoodsResponse>(environment.hoodEndpoint);
 
   }
   gethoodInfo(): Observable<any> {
@@ -43,6 +50,18 @@ export class HoodService {
     return this.http.get<viewHoodResponse>(environment.hoodEndpoint);
   }
 
+  getallPosts(): Observable<any> {
+    interface viewallPosts {
+      title: string
+      text: string
+      user: string
+      photo: string
+      date: string
+    }
+    return this.http.get<viewallPosts>(environment.allposts);
+  }
+
+
   loginUser(userdata): Observable<any> {
     // interface loginResponse {
     //   username: string
@@ -54,7 +73,9 @@ export class HoodService {
   registerUser(userdata): Observable<any> {
 
     return this.http.post(environment.signupEndpoint, userdata)
+
   }
+
 
 }
 

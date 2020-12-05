@@ -35,9 +35,13 @@
                     At least 8 characters and 1 digit
                 </small>
 
-                <select class="browser-default custom-select">
-                    <option selected>Open this select menu</option>
+                <select class="browser-default custom-select" [(ngModel)]="register.neighbourhood" name=neighbourhood>
+                    <option *ngFor="let hood of hoods"  [(value)]="hood.id">{{hood.name}}</option>
+
                 </select>
+                <!-- <select [(ngModel)]="selectedValue">
+                    <option *ngFor="let c of countries" [ngValue]="c">{{c.name}}</option>
+                  </select> -->
 
                 <!-- Sign up button -->
                 <button class="btn btn-info my-4 btn-block" type="submit" (click)="onRegister()">Sign Up</button>
