@@ -20,7 +20,7 @@ export class SignupComponent implements OnInit {
       lname: '',
       email: '',
       password: '',
-      neighbourhood:''
+      neighbourhood: ''
     }
     this.hoodService.getAllHoods().subscribe((res: Response) => {
 
@@ -28,27 +28,28 @@ export class SignupComponent implements OnInit {
         const [_, value] = result;
         let id = value['id']
         let name = value['hoodName']
-        let nameObject = new Signup(id,name)
+        let nameObject = new Signup(id, name)
         this.hoods.push(nameObject)
-
-
       })
-        
-        // // this.register.neighbourhood.push(res)
-        // let ress = this.hoods.push(res)
-        // console.log(this.hoods)
+      // // this.register.neighbourhood.push(res)
+      // let ress = this.hoods.push(res)
+      // console.log(this.hoods)
 
-      })
+    })
 
-    }
+  }
 
   onRegister() {
-      this.hoodService.registerUser(this.register).subscribe((res: Response) => {
-        alert('user' + this.register.username + 'created')
-        console.log(res)
-      }, error => {
-        console.log('error')
-      })
-    }
+    this.hoodService.registerUser(this.register).subscribe((res: Response) => {
+      alert('user' + this.register.username + 'created')
+      console.log(res)
+      console.log(res['username'])
+      console.log(res['email'])
+      console.log(res['neighbourhood'])
+
+    }, error => {
+      console.log('error')
+    })
+  }
 
 }

@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { HoodService } from '../hood.service'
+import { HttpClient } from '@angular/common/http';
+import{SignupComponent} from '../signup/signup.component'
+import { from } from 'rxjs';
+
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +12,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: HoodService, http: HttpClient) {
+
+  }
 
   ngOnInit(): void {
+
   }
 
 }

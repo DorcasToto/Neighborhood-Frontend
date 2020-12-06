@@ -32,7 +32,7 @@ export class HoodService {
   }
   getAllHoods(): Observable<any> {
     interface allhoodsResponse {
-      id:number
+      id: number
       name: string
     }
     return this.http.get<allhoodsResponse>(environment.hoodEndpoint);
@@ -75,10 +75,14 @@ export class HoodService {
     return this.http.post(environment.signupEndpoint, userdata)
 
   }
-  newPost(userdata):Observable<any>{
-    return this.http.post(environment.newPost,userdata)
+  newPost(userdata): Observable<any> {
+    return this.http.post(environment.newPost, userdata)
   }
 
+  getUsers() {
+
+    return this.http.get(environment.signupEndpoint)
+  }
 
 }
 
