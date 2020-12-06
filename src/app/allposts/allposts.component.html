@@ -39,17 +39,17 @@
                                     Your description
                                     </textarea>
                             </div>
-                            <div class="input-group">
+                            <!-- <div class="input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
                                 </div>
                                 <div class="custom-file">
                                     <input #photoRef id="photoRef" type="file" class="custom-file-input"
-                                        aria-describedby="inputGroupFileAddon01" (click)="(form.photo = photoRef.files)"
+                                        aria-describedby="inputGroupFileAddon01" 
                                         name="photo" [(ngModel)]="newPost.photo">
                                     <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <!-- <div class="button" ngf-select ng-model="newPost.photo" name="file" ngf-pattern="'image/*'"
                                 ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="100">Select</div> -->
@@ -83,6 +83,7 @@
 
                     <!-- Title -->
                     <h4 class="">{{post.title}}</h4>
+                    <p class="">{{post.text}}</p>
                     <!-- Text -->
                     <div class="row">
                         <div class="col-sm">

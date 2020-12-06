@@ -26,7 +26,7 @@ export class AllpostsComponent implements OnInit {
     this.newPost = {
       title: '',
       text: '',
-      photo: null
+      // photo: '',
     }
 
     this.hoodservice.getallPosts().subscribe((res: Response) => {
@@ -46,12 +46,12 @@ export class AllpostsComponent implements OnInit {
   }
 
   createPost() {
-    let valid_photo = ( this.form.photo && this.form.photo.length)
-      ? this.form.photo
-      : null
+    // let valid_photo = ( this.form.photo && this.form.photo.length)
+    //   ? this.form.photo
+    //   : null
 
-    this.newPost['photo'] = valid_photo
-    console.log(this.newPost['photo'])
+    // this.newPost['photo'] = valid_photo
+    // console.log(this.newPost['photo'])
     this.hoodservice.newPost(this.newPost).subscribe((res: Response) => {
       alert('Post' + this.newPost.title + 'created')
       console.log(res)
