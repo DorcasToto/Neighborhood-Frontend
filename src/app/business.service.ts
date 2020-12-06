@@ -8,15 +8,15 @@ import {environment} from '../environments/environment'
   providedIn: 'root'
 })
 export class BusinessService {
-  business: Business
   
-
   constructor(private http: HttpClient) { }
 
   getBusinessList(): Observable<any> {
     interface ApiResponse {
       name: string
       description: string
+      user: string
+      email: string
     }
     return this.http.get<ApiResponse>(environment.businessEndpoint);
 

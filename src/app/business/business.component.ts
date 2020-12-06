@@ -25,13 +25,15 @@ export class BusinessComponent implements OnInit {
 
   ngOnInit(): void {
     this.businessService.getBusinessList().subscribe((res: Response) => {
-      console.log(res)
-      Object.entries(res).forEach(result => {
+      console.log(res['business_set'])
+      Object.entries(res['business_set']).forEach(result => {
       const [_, value] = result;
-       let name = value['name'];
-       let description = value['description']
-       let businessObject = new Business(name,description)
-       this.businesses.push(businessObject)
+        let name = value['businessName'];
+        let photo = value['photo'];
+        let user = value['user'];
+        let email = value['businessEmail'];
+        let businessObject = new Business(name,photo,user,email)
+        this.businesses.push(businessObject)
       });
     });
   }

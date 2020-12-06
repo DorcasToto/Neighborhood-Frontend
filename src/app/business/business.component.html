@@ -4,25 +4,24 @@
     <div class="col-md-4 pt-3" *ngFor="let business of businesses">
       <!-- Card -->
       <div class="card">
-
-
-        <!-- Card image -->
-        <!-- <img class="card-img-top" src="https://res.cloudinary.com/dzvafknwk/{{hood.photo}}"
-                    alt="Card image cap" class="img-fluid"> -->
-
-
         <!-- Card content -->
         <div class="card-body">
           <!-- Title -->
           <h4 class="">{{business.name}}</h4>
           <!-- Text -->
+          <div class="col-sm img-fluid" >
+            <img src="https://res.cloudinary.com/dzvafknwk/{{business.photo}}">
+          </div>
           <div class="col-sm">
-            <p>{{business.description}}</p>
+            <p>By: {{business.user}}</p>
+          </div>
+          <div class="col-sm">
+            <p>{{business.businessEmail}}</p>
           </div>
         </div>
-
       </div>
     </div>
-    <!-- Card -->
   </div>
+  <!-- Card -->
 </div>
+

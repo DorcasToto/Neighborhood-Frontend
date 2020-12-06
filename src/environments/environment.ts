@@ -5,9 +5,8 @@
 export const environment = {
   production: false,
   hoodEndpoint: 'https://hood256.herokuapp.com/api/v1/hoods/',
-  businessEndpoint: 'https://hood256.herokuapp.com/api/v1/view_hood/%3Cpk%3E/',
-  postEndpoint: 'https://hood256.herokuapp.com/api/v1/post/',
-};
+  businessEndpoint: 'https://hood256.herokuapp.com/api/v1/view_hood/1/',
+  };
 
 
 
