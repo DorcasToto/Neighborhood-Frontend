@@ -4,7 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HoodComponent } from './hood/hood.component';
-import { HttpClientModule } from '@angular/common/http';
 import { ViewhoodInfoComponent } from './viewhood-info/viewhood-info.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
@@ -24,7 +23,7 @@ import { BusinessDetailComponent } from './business-detail/business-detail.compo
     LoginComponent,
     SignupComponent,
     AllpostsComponent,
-    NavbarComponent
+    NavbarComponent,
     BusinessComponent,
     BusinessDetailComponent,
   ],
