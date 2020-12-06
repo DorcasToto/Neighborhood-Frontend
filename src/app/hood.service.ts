@@ -75,6 +75,9 @@ export class HoodService {
     return this.http.post(environment.signupEndpoint, userdata)
 
   }
+  newPost(userdata):Observable<any>{
+    return this.http.post(environment.newPost,userdata)
+  }
 
 
 }
