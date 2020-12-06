@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
   onLogin() {
     this.hoodService.loginUser(this.input).subscribe((res: Response) => {
       localStorage.setItem('accessToken', res['access'])
-      this.rouuter.navigate(['/hood'])
+      this.rouuter.navigate(['/allposts'])
       // console.log(res['access'])
     }, error => {
       console.log('error')
