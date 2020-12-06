@@ -1,0 +1,100 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+
+    <div class="jumbotron jumbotron-fluid mt-3">
+        <div class="container">
+            <h2 class="display-4">Hood Come</h2>
+            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        </div>
+    </div>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basicExampleModal">
+        New Post
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">New Post</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="">
+                        <!-- Default form register -->
+                        <form class="text-center border border-light p-5" action="#!">
+                            <div class="form-group">
+                                <input type="text" id="defaultRegisterFormFirstName" class="form-control"
+                                    placeholder="Title of the post" [(ngModel)]="newPost.title" name="title">
+                            </div>
+                            <div class="form-group">
+                                <textarea type="text" id="defaultRegisterFormLastName" class="form-control"
+                                    [(ngModel)]="newPost.text" name="text">
+                                    Your description
+                                    </textarea>
+                            </div>
+                            <!-- <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                                </div>
+                                <div class="custom-file">
+                                    <input #photoRef id="photoRef" type="file" class="custom-file-input"
+                                        aria-describedby="inputGroupFileAddon01" 
+                                        name="photo" [(ngModel)]="newPost.photo">
+                                    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                </div>
+                            </div> -->
+
+                            <!-- <div class="button" ngf-select ng-model="newPost.photo" name="file" ngf-pattern="'image/*'"
+                                ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="100">Select</div> -->
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" (click)="createPost()" class="btn btn-primary">Save
+                                    changes</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row" *ngFor="let post of postss">
+            <div class="col-md-12 pt-3">
+                <!-- Card -->
+                <div class="card">
+
+                    <!-- Card image -->
+                    <!-- <img class="card-img-top" src="https://res.cloudinary.com/dzvafknwk/{{post.photo}}" alt="Card image cap"
+                    class="img-fluid"> -->
+
+                    <!-- Card content -->
+                    <div class="card-body">
+
+                        <!-- Title -->
+                        <h4 class="">{{post.title}}</h4>
+                        <p class="">{{post.text}}</p>
+                        <!-- Text -->
+                        <div class="row">
+                            <div class="col-sm">
+                                <p>By</p>
+                            </div>
+                            <div class="col-sm">
+                                <p>{{post.user}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

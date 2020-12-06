@@ -1,0 +1,33 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <form class="text-center border border-light p-5" action="#!">
+
+                <p class="h4 mb-4">Sign in</p>
+
+                <!-- Email -->
+                <input type="text" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Username"
+                    [(ngModel)]="input.username" name="username">
+
+                <!-- Password -->
+                <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password"
+                    [(ngModel)]="input.password" name="password">
+
+                <!-- Sign in button -->
+                <a>
+                    <button class="btn btn-info btn-block my-4" type="submit" (click)="onLogin()">Sign in</button>
+                </a>
+
+                <!-- Register -->
+                <p>Not a member?
+                    <a routerLink="/signup">Signup
+                    </a>
+
+                </p>
+
+
+            </form>
+        </div>
+    </div>
+
+</div>
