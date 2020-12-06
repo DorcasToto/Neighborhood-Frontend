@@ -23,13 +23,14 @@ export class HoodComponent implements OnInit {
   ngOnInit(): void {
     let accessToken = localStorage.getItem('accessToken')
     this.hoodservice.getHoodList(accessToken).subscribe((res: Response) => {
-      console.log(res)
+  
       Object.entries(res).forEach(result => {
         const [_, value] = result;
        let name = value['hoodName'];
        let location = value['hoodLocation']
        let photo = value['photo']
-       let occupant = value['occupantsCount']
+       let occupant = value['occupants_count']
+       console.log(occupant)
        let admin = value['admin']
        let hoodObject = new Hoodclass(name,photo,location,occupant,admin)
        this.hoods.push(hoodObject)

@@ -11,6 +11,7 @@ import { SignupComponent } from './signup/signup.component';
 
 import { FormsModule } from '@angular/forms';
 import { AllpostsComponent } from './allposts/allposts.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AllpostsComponent } from './allposts/allposts.component';
     ViewhoodInfoComponent,
     LoginComponent,
     SignupComponent,
-    AllpostsComponent
+    AllpostsComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
