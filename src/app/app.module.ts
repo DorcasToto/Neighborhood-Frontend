@@ -13,6 +13,7 @@ import { AllpostsComponent } from './allposts/allposts.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BusinessComponent } from './business/business.component';
 import { BusinessDetailComponent } from './business-detail/business-detail.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { BusinessDetailComponent } from './business-detail/business-detail.compo
     NavbarComponent,
     BusinessComponent,
     BusinessDetailComponent,
+    ProfileComponent,
   ],
   imports: [
     HttpClientModule,
