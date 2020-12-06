@@ -38,6 +38,7 @@ export class LoginComponent implements OnInit {
   // }
   onLogin() {
     this.hoodService.loginUser(this.input).subscribe((res: Response) => {
+      console.log(res)
       localStorage.setItem('accessToken', res['access'])
       this.rouuter.navigate(['/allposts'])
       // console.log(res['access'])

@@ -53,6 +53,7 @@ export class AllpostsComponent implements OnInit {
     // this.newPost['photo'] = valid_photo
     // console.log(this.newPost['photo'])
     this.hoodservice.newPost(this.newPost).subscribe((res: Response) => {
+      console.log(res)
       alert('Post' + this.newPost.title + 'created')
       console.log(res)
 
