@@ -1,17 +1,18 @@
+<div class="business">
+  <app-navbar></app-navbar>
+  <div class="container-fluid" style="font-family: 'Yeon Sung', cursive;" id="posts">
+    <h3 class="text-center text-white">Businesses In your Hood</h3>
+    <div class="row mb-3">
+      <div class="col-md-4" *ngFor="let business of businesses">
+        <div class="card">
+          <img class="card-img-top" src="https://res.cloudinary.com/dzvafknwk/{{business.photo}}" alt="Card image cap">
 
-<app-navbar></app-navbar>
-<div class="container-fluid">
-  <h3>Businesses In your Hood</h3>
-  <div class="row" *ngFor="let business of businesses">
-    <div class="col-md-4">
-      <div class="card">
-        <img class="card-img-top" src="https://res.cloudinary.com/dzvafknwk/{{business.photo}}" alt="Card image cap">
+          <div class="card-body">
+            <h4><a>{{business.name}}</a></h4>
+            <p class="card-text">{{business.businessEmail}}</p>
+          </div>
 
-        <div class="card-body">
-          <h4><a>{{business.name}}</a></h4>
-          <p class="card-text">{{business.businessEmail}}</p>
         </div>
-
       </div>
     </div>
   </div>

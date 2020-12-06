@@ -2,7 +2,7 @@
 
 <div class="container-fluid" style="font-family: 'Yeon Sung', cursive;" id="posts">
     <h1 class="text-center text-white">View Available Hoods</h1>
-    <hr>
+    <hr class="text-white">
     <div class="row">
         <div class="col-md-4 pt-3" *ngFor="let hood of hoods">
             <!-- Card -->
@@ -16,14 +16,14 @@
                 <div class="card-body">
 
                     <!-- Title -->
-                    <h4 class="">{{hood.hoodName}}</h4>
+                    <h4 class="text-secondary">{{hood.hoodName}}</h4>
                     <!-- Text -->
                     <div class="row">
                         <div class="col-sm">
                             <p>Location</p>
                         </div>
                         <div class="col-sm">
-                            <p>{{hood.hoodLocation}}</p>
+                            <p class="">{{hood.hoodLocation}}</p>
                         </div>
                     </div>
                     <div class="row">
