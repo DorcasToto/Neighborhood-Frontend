@@ -10,4 +10,5 @@ export const environment = {
   loginEndpoint: 'https://hood256.herokuapp.com/auth/login/',
   signupEndpoint: 'https://hood256.herokuapp.com/auth/signup/',
   businessEndpoint: 'https://hood256.herokuapp.com/api/v1/view_hood/1/',
+  currentuser:'https://hood256.herokuapp.com/currentuser/'
 };
