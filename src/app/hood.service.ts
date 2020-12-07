@@ -4,7 +4,6 @@ import { Hoodclass } from './hoodclass'
 import { Observable } from 'rxjs';
 import { environment } from '../environments/environment'
 import { Viewhoodclass } from './viewhoodclass';
-
 @Injectable({
   providedIn: 'root'
 })
@@ -82,6 +81,9 @@ export class HoodService {
   getUsers() {
 
     return this.http.get(environment.signupEndpoint)
+  }
+  currentUser() {
+    return this.http.get(environment.currentuser)
   }
 
 }

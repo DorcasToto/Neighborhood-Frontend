@@ -12,7 +12,7 @@ import { HoodService } from '../hood.service'
 export class LoginComponent implements OnInit {
   input;
 
-  constructor(private hoodService: HoodService,private rouuter:Router) { }
+  constructor(private hoodService: HoodService, private rouuter: Router) { }
 
   ngOnInit(): void {
     this.input = {
@@ -38,6 +38,7 @@ export class LoginComponent implements OnInit {
   // }
   onLogin() {
     this.hoodService.loginUser(this.input).subscribe((res: Response) => {
+    // let token = res.json() && res.json().token;
       console.log(res)
       localStorage.setItem('accessToken', res['access'])
       this.rouuter.navigate(['/allposts'])
@@ -46,4 +47,6 @@ export class LoginComponent implements OnInit {
       console.log('error')
     })
   }
+
+
 }

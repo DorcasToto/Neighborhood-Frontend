@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HoodService } from '../hood.service'
 import { HttpClient } from '@angular/common/http';
-import{SignupComponent} from '../signup/signup.component'
+import { SignupComponent } from '../signup/signup.component'
 import { from } from 'rxjs';
 
 
@@ -17,6 +17,14 @@ export class ProfileComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.service.currentUser().subscribe((res:Response)=>{
+      console.log(res['logged'])
+    })
+
+    // $http({ method: 'POST', url: '/someUrl' }).
+    //   success(function (data) {
+    //     //process aswer
+    //   });
 
   }
 
