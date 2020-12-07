@@ -6,14 +6,6 @@ export const environment = {
   production: false,
 
 
-
-  // hoodEndpoint :'http://localhost:8000/api/v1/hoods/',
-  // allposts :'http://localhost:8000/api/v1/allposts/',
-
-  // viewhoodsEndPoint:'http://localhost:8000/api/v1/view_hood/%3Cpk%3E/',
-  // loginEndpoint:'http://localhost:8000/auth/login/',
-  // signupEndpoint:'http://localhost:8000/auth/signup/',
-
   hoodEndpoint: 'https://hood256.herokuapp.com/api/v1/hoods/',
   allposts: 'https://hood256.herokuapp.com/api/v1/allposts/',
   newPost : 'https://hood256.herokuapp.com/api/v1/post/',
@@ -23,11 +15,6 @@ export const environment = {
   signupEndpoint: 'https://hood256.herokuapp.com/auth/signup/',
   businessEndpoint: 'https://hood256.herokuapp.com/api/v1/view_hood/1/',
 
-
-  // method: 'post',
-  // headers: {
-  //   'Content-Type': '',
-  //   'Authorization': window.localStorage.getItem('access')
 }
 
 
