@@ -2,6 +2,10 @@
 
 This is a full stack project generated with Angular 10 and Django 3.
 
+### GITHUB LINKS
+* Frontend - https://github.com/DorcasToto/Neighborhood-Frontend
+* Backend - https://github.com/DorcasToto/Neighborhood-Backend
+
 # Description
 
 Neighbourhood project is a web application that allows you to be in the loop about what's happening in your neighbourhood.
