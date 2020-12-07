@@ -21,6 +21,7 @@ The user can only see the posts, businesses or access the services e.g health ca
 6. HTML
 7. CSS
 8. Postres
+9. Figma - https://www.figma.com/file/vjstg4SojiwXa2GscYDj9O/Neighbourhood?node-id=0%3A1
 
 # Features
 
